@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/style/style.css">
+    <title>TicTacToe</title>
+    <style>
+        .container-tic {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 50px auto;
+            max-width: 800px;
+        }
+
+        .h1-tic {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+            animation: scaleIn 1s ease-in-out;
+        }
+
+        section {
+            margin-top: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        td {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #ccc;
+            text-align: center;
+            font-size: 4rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        td:hover {
+            background-color: #eee;
+        }
+
+        td.selected {
+            background-color: #4caf50;
+            color: #fff;
+            transform: rotateY(360deg);
+            animation: rotateIn 0.5s ease-in-out;
+        }
+
+        #result {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            background-color: #ffffff;
+            color: #000000;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+            animation: slideIn 0.5s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #000000;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0.5);
+            }
+
+            to {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes rotateIn {
+            from {
+                transform: rotateY(180deg);
+            }
+
+            to {
+                transform: rotateY(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>TicTacToe</h1>
+            <nav>
+                <ul>
+                    <li><a href="/" title="Go to the home page">Home</a></li>
+                    <li>
+                        <a href="#">Projects</a>
+                        <ul>
+                            <li><a href="../projects/chat" title="View SimpleChatBot project">SimpleChatBot</a></li>
+                            <li><a href="../projects/tictactoe" title="View TicTacToe project">TicTacToe</a></li>
+                            <li><a href="../projects/topdownshooter" title="View TopDownShooter project">TopDownShooter</a></li>
+                        </ul>
+                    </li>
+                    <li class="mode-toggle-container">
+                        <a href="#" id="mode-toggle" title="Toggle dark mode">Dark Mode</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>About the TicTacToe Project</h2>
+            <p>Just a simple TicTacToe project, which I created with the help of ChatGPT</p>
+            <h2>Features</h2>
+            <ul>
+                <li>A basic computer player that can respond with random moves</li>
+                <li>A reset feature that allows you to start a new game with a fresh board</li>
+            </ul>
+            <p>Planning to add more stuff(Hopefully): </p>
+            <ul>
+                <li>Making the computer player more challenging with better moves</li>
+                <li>Adding a scoreboard to keep track of wins and losses</li>
+            </ul>
+        </section>
+    </div>
+    <main>
+        <div class="container-tic">
+            <h1 class="h1-tic">TicTacToe</h1>
+            <table id=".cell">
+                <tr>
+                    <td id="0"></td>
+                    <td id="1"></td>
+                    <td id="2"></td>
+                </tr>
+                <tr>
+                    <td id="3"></td>
+                    <td id="4"></td>
+                    <td id="5"></td>
+                </tr>
+                <tr>
+                    <td id="6"></td>
+                    <td id="7"></td>
+                    <td id="8"></td>
+                </tr>
+            </table>
+            <div id="result"></div>
+            <button onclick="reset()">Reset Game</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Mafari | <a href="https://github.com/mafarit">GitHub</a></p>
+        </div>
+    </footer>
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SimpleChatBot</title>
+    <link rel="stylesheet" href="../static/style/style.css" />
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>SimpleChatBot</h1>
+            <nav>
+                <ul>
+                    <li><a href="../" title="Go to the home page">Home</a></li>
+                    <li>
+                        <a href="#">Projects</a>
+                        <ul>
+                            <li><a href="../projects/chat" title="View SimpleChatBot project">SimpleChatBot</a></li>
+                            <li><a href="../projects/tictactoe" title="View TicTacToe project">TicTacToe</a></li>
+                            <li><a href="../projects/topdownshooter" title="View TopDownShooter project">TopDownShooter</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section>
+                <h2>About the Chatbot Project</h2>
+                <p>The chatbot project that I worked on is a simple but effective tool that can be used to automate
+                    conversations with users.
+                    The chatbot is built using Python and utilizes natural language processing that can do cool stuffs
+                    such as translate texts
+                    ask about the weather and many more!
+                </p>
+                <h2>Features</h2>
+                <p>
+                    For now the bot can only do some basic stuffs such as:
+                </p>
+                <ul>
+                    <li>Translating text</li>
+                    <li>Weather information</li>
+                    <li>Basic math calculations</li>
+                    <li>Have cool responses</li>
+                </ul>
+                <p>If you want to try it, refer to the instructions provided below</p>
+                <h2>Installation</h2>
+                <p>You need to install the following Python packages:</p>
+                <ul>
+                    <li>geocoder</li>
+                    <li>requests</li>
+                    <li>textblob</li>
+                    <li>nltk</li>
+                    <li>deep_translator</li>
+                </ul>
+                <p>You can install these packages using the following command:</p>
+                <pre>pip install -r requirements.txt</pre>
+
+                <h2>Usage</h2>
+                <p>
+                    To use SimpleChatBot, download the executable from the
+                    <a href="https://github.com/MafariT/SimpleChatBot/releases/latest">Releases</a>. If you choose to
+                    run the executable, you do not need to install
+                    Python or any additional packages.
+                </p>
+                <p>Here are some examples of things you can say to the chatbot:</p>
+                <ul>
+                    <li>
+                        <strong>help:</strong> displays a list of available commands and
+                        their descriptions
+                    </li>
+                    <li>
+                        <strong>translate [text] to [language]:</strong> Translates the
+                        given text to the specified language
+                    </li>
+                    <li>
+                        <strong>math [expression]:</strong> Calculates the given
+                        mathematical expression
+                    </li>
+                    <li><strong>day:</strong> Provides information on the current day</li>
+                    <li>
+                        <strong>time:</strong> Provides information on the current time
+                    </li>
+                    <li>
+                        <strong>weather:</strong> Provides weather information for the
+                        specified location
+                    </li>
+                    <li><strong>bye:</strong> Exits the chatbot</li>
+                </ul>
+                <p>
+                    Additionally, each command has alternative phrasings that can be
+                    used to trigger the corresponding action. For example, instead of
+                    typing 'time', you can ask 'What time is it?' and the chatbot will
+                    provide the current time.
+                </p>
+                <p>
+                    To use the weather feature, you will need to obtain an API key from
+                    <a href="https://openweathermap.org/">OpenWeather</a>. Once you have
+                    obtained the key, you can add it to your <code>config.py</code>
+                    file under
+                    <code>WEATHER_API_KEY = 'YOUR_API_KEY'</code>.
+                </p>
+            </section>
+
+            <nav>
+                <ul>
+                    <li class="mode-toggle-container">
+                        <a href="#" id="mode-toggle" title="Toggle dark mode">Dark Mode</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Mafari | <a href="https://github.com/mafarit">GitHub</a></p>
+        </div>
+    </footer>
+
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>
