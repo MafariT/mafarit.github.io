@@ -91,7 +91,7 @@ function reset() {
     currentPlayer = "X";
     gameOver = false;
     document.getElementById("result").textContent = "";
-    cells.forEach((cell, index) => {
+    cells.forEach((cell) => {
         cell.textContent = "";
         cell.addEventListener("click", handleCellClick);
     });
