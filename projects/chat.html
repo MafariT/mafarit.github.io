@@ -75,12 +75,17 @@
                         their descriptions
                     </li>
                     <li>
+                        <strong>gpt [message]:</strong> To interact with ChatGPT
+                    </li>
+                    <li>
+                        <strong>alpha [message]:</strong> To interact with WolframAlpha
+                    </li>
+                    <li>
                         <strong>translate [text] to [language]:</strong> Translates the
                         given text to the specified language
                     </li>
                     <li>
-                        <strong>math [expression]:</strong> Calculates the given
-                        mathematical expression
+                        <strong>math [expression]:</strong> CCalculates the given mathematical expression (help math for more details)
                     </li>
                     <li><strong>day:</strong> Provides information on the current day</li>
                     <li>
@@ -90,7 +95,6 @@
                         <strong>weather:</strong> Provides weather information for the
                         specified location
                     </li>
-                    <li><strong>bye:</strong> Exits the chatbot</li>
                 </ul>
                 <p>
                     Additionally, each command has alternative phrasings that can be
@@ -99,11 +103,11 @@
                     provide the current time.
                 </p>
                 <p>
-                    To use the weather feature, you will need to obtain an API key from
-                    <a href="https://openweathermap.org/">OpenWeather</a>. Once you have
-                    obtained the key, you can add it to your <code>config.py</code>
-                    file under
-                    <code>WEATHER_API_KEY = 'YOUR_API_KEY'</code>.
+                    To use Weather, WolframAlpha, ChatGPT feature, you need to get the api keys from
+                    <li><a href="https://openweathermap.org/">OpenWeather</a></li>
+                    <li><a href="https://products.wolframalpha.com/api/">WolframAlpha</a></li>
+                    <li><a href="https://platform.openai.com/account/api-keys)">ChatGPT</a></li>
+                    You can add it to your <code>config.py</code> file under <code>API_KEY = 'YOUR_API_KEY'</code>.
                 </p>
             </section>
 
