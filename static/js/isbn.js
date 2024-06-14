@@ -1,38 +1,3 @@
-const { app, BrowserWindow } = require('electron');
-
-function createWindow() {
-  const win = new BrowserWindow({
-    width: 1280,
-    height: 720,
-    webPreferences: {
-      nodeIntegration: true
-    },
-    autoHideMenuBar: true,
-  });
-
-  win.loadFile('index.html');
-}
-
-app.whenReady().then(createWindow);
-
-app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
-    app.quit();
-  }
-});
-
-app.on('activate', () => {
-  if (BrowserWindow.getAllWindows().length === 0) {
-    createWindow();
-  }
-});
-
-
-/*
-
-MAIN LOGIC
-
-*/
 async function validateISBN() {
   let isbn = document.getElementById('isbn').value;
   isbn = isbn.replace(/[^\dX]/gi, ''); // Remove non-numeric characters
@@ -44,7 +9,7 @@ async function validateISBN() {
   const bookInfoContainer = document.getElementById('book-info');
 
   resultElement.textContent = isValid ? 'Valid ISBN' : 'Invalid ISBN';
-  resultElement.style.backgroundColor = isValid ? '#4CAF50' : 'red'; // Change background color
+  resultElement.style.backgroundColor = isValid ? '#4CAF50' : 'red'; 
   resultElement.style.display = 'block';
   bookLinkElement.innerHTML = '';
 
